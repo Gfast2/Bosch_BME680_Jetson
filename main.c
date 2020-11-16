@@ -132,6 +132,13 @@ int main() {
   // config sensor into forced mode
   uint8_t set_required_settings;
 
+  // Init
+  rslt = bme680_init(&gas_sensor);
+  if (rslt != BME680_OK)
+  {
+    return rslt;
+  }
+
   /* Set the temperature, pressure and humidity settings */
   gas_sensor.tph_sett.os_hum = BME680_OS_2X;
   gas_sensor.tph_sett.os_pres = BME680_OS_4X;
@@ -157,9 +164,6 @@ int main() {
 
   /* Set the power mode */
   rslt = bme680_set_sensor_mode(&gas_sensor);
-
-  // Init
-  rslt = bme680_init(&gas_sensor);
 
   /* Get the total measurement duration so as to sleep or wait till the
    * measurement is complete */
