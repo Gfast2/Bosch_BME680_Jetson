@@ -163,6 +163,7 @@ int main() {
   printf("par_p8: %#06x\n", gas_sensor.calib.par_p8);
   printf("par_p9: %#06x\n", gas_sensor.calib.par_p9);
   printf("par_p10: %#06x\n", gas_sensor.calib.par_p10);
+  printf("amb_temp: %#06x\n", gas_sensor.amb_temp);
 
   /* Set the temperature, pressure and humidity settings */
   gas_sensor.tph_sett.os_hum = BME680_OS_2X;
