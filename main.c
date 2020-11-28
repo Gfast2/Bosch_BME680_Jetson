@@ -139,6 +139,31 @@ int main() {
     return rslt;
   }
 
+  printf("+--- BME680 Calib Parameters ---+\n");
+  printf("par_h1: %#06x\n", gas_sensor.calib.par_h1);
+  printf("par_h2: %#06x\n", gas_sensor.calib.par_h2);
+  printf("par_h3: %#06x\n", gas_sensor.calib.par_h3);
+  printf("par_h4: %#06x\n", gas_sensor.calib.par_h4);
+  printf("par_h5: %#06x\n", gas_sensor.calib.par_h5);
+  printf("par_h6: %#06x\n", gas_sensor.calib.par_h6);
+  printf("par_h7: %#06x\n", gas_sensor.calib.par_h7);
+  printf("par_gh1: %#06x\n", gas_sensor.calib.par_gh1);
+  printf("par_gh2: %#06x\n", gas_sensor.calib.par_gh2);
+  printf("par_gh3: %#06x\n", gas_sensor.calib.par_gh3);
+  printf("par_t1: %#06x\n", gas_sensor.calib.par_t1);
+  printf("par_t2: %#06x\n", gas_sensor.calib.par_t2);
+  printf("par_t3: %#06x\n", gas_sensor.calib.par_t3);
+  printf("par_p1: %#06x\n", gas_sensor.calib.par_p1);
+  printf("par_p2: %#06x\n", gas_sensor.calib.par_p2);
+  printf("par_p3: %#06x\n", gas_sensor.calib.par_p3);
+  printf("par_p4: %#06x\n", gas_sensor.calib.par_p4);
+  printf("par_p5: %#06x\n", gas_sensor.calib.par_p5);
+  printf("par_p6: %#06x\n", gas_sensor.calib.par_p6);
+  printf("par_p7: %#06x\n", gas_sensor.calib.par_p7);
+  printf("par_p8: %#06x\n", gas_sensor.calib.par_p8);
+  printf("par_p9: %#06x\n", gas_sensor.calib.par_p9);
+  printf("par_p10: %#06x\n", gas_sensor.calib.par_p10);
+
   /* Set the temperature, pressure and humidity settings */
   gas_sensor.tph_sett.os_hum = BME680_OS_2X;
   gas_sensor.tph_sett.os_pres = BME680_OS_4X;
